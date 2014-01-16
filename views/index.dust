@@ -6,7 +6,7 @@
 <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <head>
 <body>
-	Let's Schedule an Event!
+	<h2 class="welcome-title">Let's Schedule an Event!</h2>
 	<div>
 		<form action="/create-duration" accept-charset="utf-8" method="post">
 			<span>Event Title
