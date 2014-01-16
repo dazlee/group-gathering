@@ -1,0 +1,59 @@
+
+<head>
+<link rel="stylesheet" href="/stylesheets/style.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<head>
+<body>
+	<h3 class="event-title">{duration.title}</h3>
+	<div>
+		<table>
+			<tbody>
+				<tr>
+					<th></th>
+					{#date}
+					<th colspan="1" class="date">
+						<span>{month}/{date}</span><br>
+						<span>{day}</span>
+					</th>
+					{/date}
+				</tr>
+				{#duration.join_status}
+				<tr>
+					<th>{name}</th>
+					{#is_check}
+					{@eq key="{.}" value="true"}
+					<th class="available">
+						Yes
+					{:else}
+					<th class="unavailable">
+						No
+					{/eq}
+					</th>
+					{/is_check}
+				</tr>
+				{/duration.join_status}
+				<form action="/insert-schedule/{duration._id}" accept-charset="utf-8" method="post">
+				<tr>
+					<th><input type="text" name="name"/></th>
+					{#date}
+					<th colspan="1">
+						<input type="checkbox" name="checkbox_{$idx}" />
+					</th>
+					{/date}
+				</tr>
+				<tr>
+					<th>
+						<input type="submit" value="Submit my schedule"/>
+					</th>
+				</tr>
+				</form>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+<script type="text/javascript" src="/javascripts/common-lib.js"></script>

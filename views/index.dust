@@ -1,0 +1,25 @@
+
+<head>
+<link rel="stylesheet" href="stylesheets/style.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<head>
+<body>
+	Let's Schedule an Event!
+	<div>
+		<form action="/create-duration" accept-charset="utf-8" method="post">
+			<span>Event Title
+			<input type="text" id="event-title" name="event_title"/>
+			</span>
+			<span>start date
+			<input type="text" id="start-date" name="start_date" class="date-picker"/>
+			</span>
+			<span>end date
+			<input type="text" id="end-date" name="end_date" class="date-picker"/>
+			</span>
+			<input type="submit" value="Create Sheet!"/>
+		</form>
+	</div>
+</body>
+<script type="text/javascript" src="/javascripts/common-lib.js"></script>
